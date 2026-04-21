@@ -31,12 +31,6 @@ const submitBtn = document.getElementById('submit-btn');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const zgodaRodo = document.getElementById('zgoda_rodo');
-  if (!zgodaRodo.checked) {
-    zgodaRodo.closest('.checkbox-row').style.color = '#DC2626';
-    return;
-  }
-
   submitBtn.disabled = true;
   submitBtn.textContent = 'Wysyłanie…';
 
@@ -46,11 +40,10 @@ form.addEventListener('submit', async (e) => {
   params.append('imie_nazwisko', data.get('imie_nazwisko') || '');
   params.append('stanowisko', data.get('stanowisko') || '');
   params.append('email', data.get('email') || '');
-  params.append('telefon', data.get('telefon') || '');
+  params.append('telefon', '+48' + (data.get('telefon') || '').replace(/\D/g, ''));
   params.append('wojewodztwo', data.get('wojewodztwo') || '');
   params.append('modul', data.get('modul') || '');
   params.append('liczba_osob', data.get('liczba_osob') || '');
-  params.append('zgoda_marketing', data.get('zgoda_marketing') || 'nie');
   params.append('zrodlo', 'kadry2026');
 
   try {
