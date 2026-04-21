@@ -570,51 +570,66 @@ input:focus, select:focus {
 .btn-outline:hover { background: var(--color-accent); color: #fff; }
 
 .kontakt-card {
-  background: #fff;
-  border: 2px solid var(--color-border);
-  border-top: 4px solid var(--color-accent);
-  border-radius: 20px;
-  padding: 40px 36px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 36px 32px;
 }
 
-.kontakt-card-logo img {
-  height: 40px;
+.kontakt-card-logo-img {
+  height: 44px;
   width: auto;
-  margin-bottom: 20px;
-}
-
-.kontakt-card h3 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 1.5rem;
-  color: var(--color-dark);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  display: block;
 }
 
 .kontakt-card-tagline {
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   color: var(--color-muted);
-  margin-bottom: 24px;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
-.kontakt-card-highlight {
-  background: var(--color-surface);
-  border-left: 3px solid var(--color-accent);
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  margin-bottom: 24px;
+.kontakt-card-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 20px 0;
 }
 
-.kontakt-card-highlight strong { color: var(--color-accent); }
-
-.kontakt-card-details {
+.kontakt-card-row {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 0;
   font-size: 0.875rem;
-  color: var(--color-muted);
+  line-height: 1.5;
 }
+
+.kontakt-card-label {
+  font-weight: 700;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  min-width: 60px;
+}
+
+.kontakt-card-row span:not(.kontakt-card-label),
+.kontakt-card-row a {
+  text-align: right;
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+
+.kontakt-card-row a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.kontakt-card-row a:hover { text-decoration: underline; }
 
 /* FOOTER */
 footer {
