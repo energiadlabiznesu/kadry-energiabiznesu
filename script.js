@@ -44,6 +44,7 @@ form.addEventListener('submit', async (e) => {
   params.append('wojewodztwo', data.get('wojewodztwo') || '');
   params.append('modul', data.get('modul') || '');
   params.append('liczba_osob', data.get('liczba_osob') || '');
+  params.append('zgoda_marketing', data.get('zgoda_marketing') || 'tak');
   params.append('zrodlo', 'kadry2026');
 
   try {
