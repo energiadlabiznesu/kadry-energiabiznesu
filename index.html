@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +19,9 @@
 <!-- NAV -->
 <nav>
   <div class="container nav-inner">
-    <a href="/" class="nav-logo">Energia <span>dla Biznesu</span></a>
+    <a href="/" class="nav-logo">
+      <img src="assets/logo.png" alt="Energia dla Biznesu" class="nav-logo-img">
+    </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="#moduly">Moduły</a></li>
       <li><a href="#ekspertka">Ekspertka</a></li>
@@ -316,109 +319,116 @@
 </section>
 
 <!-- FORMULARZ -->
-<section id="formularz">
+<section id="formularz" class="formularz-section">
   <div class="container">
-    <div class="formularz-inner">
-      <h2 class="section-title" style="margin-bottom:12px">Zamów bezpłatną konsultację</h2>
-      <p>Oddzwonimy w ciągu 24 godzin. Bez zobowiązań.</p>
+    <div class="formularz-layout">
 
-      <div id="form-wrap">
-        <form id="contact-form">
-          <div class="form-grid">
+      <div class="formularz-left">
+        <p class="formularz-eyebrow">Zapisz się</p>
+        <h2>Zamów bezpłatną<br><span class="formularz-accent">konsultację</span></h2>
+        <p class="formularz-sub">Wypełnij formularz — sprawdzimy dostępne dofinansowanie, pomożemy z dokumentami i przeprowadzimy całe zgłoszenie. Bezpłatnie.</p>
 
-            <div class="form-field">
-              <label for="nazwa_placowki">Nazwa placówki *</label>
-              <input type="text" id="nazwa_placowki" name="nazwa_placowki" required>
+        <div class="formularz-kfs-box">
+          <p class="formularz-kfs-label">Dlaczego pytamy o placówkę?</p>
+          <p>Sprawdzamy czy możesz dostać <strong>dofinansowanie z KFS</strong> — zamiast <s>4 000 zł</s> możesz zapłacić nawet <strong class="formularz-kfs-price">350 zł / osobę</strong>. Całą dokumentację robimy za Ciebie, bezpłatnie.</p>
+        </div>
+
+        <div class="formularz-trust">
+          <div class="formularz-trust-item">✅ Bezpłatna konsultacja</div>
+          <div class="formularz-trust-item">✅ Wniosek do PUP za Ciebie</div>
+          <div class="formularz-trust-item">✅ Odpowiedź w 24h</div>
+        </div>
+      </div>
+
+      <div class="formularz-right">
+        <div id="form-wrap">
+          <form id="contact-form" class="form-new">
+
+            <div class="form-row-2">
+              <div class="form-field-new">
+                <input type="text" name="nazwa_placowki" placeholder="Nazwa placówki *" required>
+              </div>
+              <div class="form-field-new">
+                <input type="text" name="imie_nazwisko" placeholder="Imię i nazwisko *" required>
+              </div>
             </div>
 
-            <div class="form-field">
-              <label for="imie_nazwisko">Imię i nazwisko *</label>
-              <input type="text" id="imie_nazwisko" name="imie_nazwisko" required>
+            <div class="form-row-2">
+              <div class="form-field-new">
+                <input type="email" name="email" placeholder="Email służbowy *" required>
+              </div>
+              <div class="form-field-new form-tel-wrap">
+                <span class="form-tel-prefix">+48</span>
+                <input type="tel" name="telefon" placeholder="123 456 789" required>
+              </div>
             </div>
 
-            <div class="form-field">
-              <label for="stanowisko">Stanowisko *</label>
-              <input type="text" id="stanowisko" name="stanowisko" placeholder="np. Dyrektor, Kierownik" required>
+            <div class="form-row-2">
+              <div class="form-field-new">
+                <input type="text" name="stanowisko" placeholder="Stanowisko (np. Dyrektor) *" required>
+              </div>
+              <div class="form-field-new">
+                <select name="wojewodztwo" required>
+                  <option value="">Województwo *</option>
+                  <option>dolnośląskie</option>
+                  <option>kujawsko-pomorskie</option>
+                  <option>lubelskie</option>
+                  <option>lubuskie</option>
+                  <option>łódzkie</option>
+                  <option>małopolskie</option>
+                  <option>mazowieckie</option>
+                  <option>opolskie</option>
+                  <option>podkarpackie</option>
+                  <option>podlaskie</option>
+                  <option>pomorskie</option>
+                  <option>śląskie</option>
+                  <option>świętokrzyskie</option>
+                  <option>warmińsko-mazurskie</option>
+                  <option>wielkopolskie</option>
+                  <option>zachodniopomorskie</option>
+                </select>
+              </div>
             </div>
 
-            <div class="form-field">
-              <label for="email">Email służbowy *</label>
-              <input type="email" id="email" name="email" required>
+            <div class="form-row-2">
+              <div class="form-field-new">
+                <select name="modul" required>
+                  <option value="">Interesujący moduł *</option>
+                  <option>Moduł 1 — Charyzmatyczny Mówca</option>
+                  <option>Moduł 2 — Komunikacja Kryzysowa</option>
+                  <option>Moduł 3 — Dobrostan i Coaching</option>
+                  <option>Chcę porozmawiać o wszystkich</option>
+                </select>
+              </div>
+              <div class="form-field-new">
+                <select name="liczba_osob" required>
+                  <option value="">Liczba osób *</option>
+                  <option>1–2 osoby</option>
+                  <option>3–5 osób</option>
+                  <option>6–10 osób</option>
+                  <option>Powyżej 10 osób</option>
+                </select>
+              </div>
             </div>
 
-            <div class="form-field">
-              <label for="telefon">Telefon *</label>
-              <input type="tel" id="telefon" name="telefon" required>
-            </div>
-
-            <div class="form-field">
-              <label for="wojewodztwo">Województwo *</label>
-              <select id="wojewodztwo" name="wojewodztwo" required>
-                <option value="">Wybierz województwo</option>
-                <option>dolnośląskie</option>
-                <option>kujawsko-pomorskie</option>
-                <option>lubelskie</option>
-                <option>lubuskie</option>
-                <option>łódzkie</option>
-                <option>małopolskie</option>
-                <option>mazowieckie</option>
-                <option>opolskie</option>
-                <option>podkarpackie</option>
-                <option>podlaskie</option>
-                <option>pomorskie</option>
-                <option>śląskie</option>
-                <option>świętokrzyskie</option>
-                <option>warmińsko-mazurskie</option>
-                <option>wielkopolskie</option>
-                <option>zachodniopomorskie</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="modul">Interesujący moduł *</label>
-              <select id="modul" name="modul" required>
-                <option value="">Wybierz moduł</option>
-                <option>Moduł 1 — Charyzmatyczny Mówca</option>
-                <option>Moduł 2 — Komunikacja Kryzysowa</option>
-                <option>Moduł 3 — Dobrostan i Coaching</option>
-                <option>Chcę porozmawiać o wszystkich</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="liczba_osob">Liczba osób *</label>
-              <select id="liczba_osob" name="liczba_osob" required>
-                <option value="">Wybierz</option>
-                <option>1–2 osoby</option>
-                <option>3–5 osób</option>
-                <option>6–10 osób</option>
-                <option>Powyżej 10 osób</option>
-              </select>
-            </div>
-
-            <label class="checkbox-row full">
-              <input type="checkbox" id="zgoda_rodo" required>
-              <span>Wyrażam zgodę na przetwarzanie danych osobowych przez Energia dla Biznesu w celu kontaktu zwrotnego (RODO). *</span>
-            </label>
-
-            <label class="checkbox-row full">
-              <input type="checkbox" name="zgoda_marketing" value="tak">
-              <span>Chcę otrzymywać informacje o naborach KFS i szkoleniach mailowo.</span>
-            </label>
-
-            <button type="submit" class="btn-submit" id="submit-btn">
-              Zamów bezpłatną konsultację →
+            <button type="submit" class="btn-submit-new" id="submit-btn">
+              WYŚLIJ ZGŁOSZENIE →
             </button>
 
-          </div>
-        </form>
-      </div>
+            <p class="form-privacy">
+              Wyrażam zgodę na przetwarzanie danych osobowych w celu obsługi zgłoszenia szkoleniowego i kontaktu w sprawie dofinansowania KFS, zgodnie z <a href="#">polityką prywatności</a>. Administratorem danych jest Energia dla Biznesu.
+            </p>
 
-      <div class="form-success" id="form-success">
-        <h3>✅ Dziękujemy!</h3>
-        <p>Oddzwonimy w ciągu 24 godzin roboczych.<br>W pilnych sprawach: <strong>505 027 741</strong></p>
-      </div>
+          </form>
+        </div>
 
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">✅</div>
+          <h3>Dziękujemy za zgłoszenie!</h3>
+          <p>Oddzwonimy w ciągu 24 godzin roboczych.<br>W pilnych sprawach: <strong>505 027 741</strong></p>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -432,10 +442,11 @@
       <div class="kontakt-left">
         <p>Szkolenia dla kadry oświatowej — przedszkoli, szkół i samorządów. Dofinansowanie z KFS nawet do 90%. Pomagamy przez cały proces — od wyboru modułu po rozliczenie.</p>
         <ul class="kontakt-data">
-          <li>📧 szkolenia@energiabiznesu.pl</li>
+          <li>📧 <a href="mailto:energiabiznesu@gmail.com">energiabiznesu@gmail.com</a></li>
           <li>📞 505 027 741 — Monika Żmijewska (dyrektor ds. projektów)</li>
-          <li>📞 793 140 340 — Magdalena Olech (specjalista ds. projektów)</li>
-          <li>🌐 www.energiabiznesu.pl</li>
+          <li>📍 ul. Wierzbowa 9/3, 25-007 Kielce</li>
+          <li>📧 <a href="mailto:wsparcie.placowek@gmail.com">wsparcie.placowek@gmail.com</a></li>
+          <li>🏢 NIP: 959 147 22 55</li>
         </ul>
 
         <div class="social-row">
@@ -462,16 +473,28 @@
         </div>
 
         <div class="kontakt-btns">
-          <a href="mailto:szkolenia@energiabiznesu.pl" class="btn-outline">Napisz do nas</a>
+          <a href="mailto:energiabiznesu@gmail.com" class="btn-outline">Napisz do nas</a>
           <a href="tel:505027741" class="btn-primary">Zadzwoń teraz</a>
         </div>
       </div>
 
       <div class="kontakt-card">
+        <div class="kontakt-card-logo">
+          <img src="assets/logo.png" alt="Energia dla Biznesu">
+        </div>
         <h3>Energia dla Biznesu</h3>
-        <p>Certyfikowane szkolenia dla firm, instytucji i placówek oświatowych</p>
-        <p style="margin-top:24px"><span class="accent">Szkolenia dla kadry oświatowej 2026</span><br>Dofinansowanie z KFS nawet do 90%.<br>Pomagamy przez cały proces — od wyboru modułu po rozliczenie.</p>
-        <p style="margin-top:24px;font-size:.85rem">📧 szkolenia@energiabiznesu.pl<br>📞 505 027 741</p>
+        <p class="kontakt-card-tagline">Certyfikowane szkolenia dla firm, instytucji i placówek oświatowych</p>
+        <div class="kontakt-card-highlight">
+          <strong>Szkolenia dla kadry oświatowej 2026</strong><br>
+          Dofinansowanie z KFS nawet do 90%.<br>
+          Pomagamy przez cały proces — od wyboru modułu po rozliczenie.
+        </div>
+        <div class="kontakt-card-details">
+          <span>📧 energiabiznesu@gmail.com</span>
+          <span>📞 505 027 741</span>
+          <span>📍 ul. Wierzbowa 9/3, 25-007 Kielce</span>
+          <span>🏢 NIP: 959 147 22 55</span>
+        </div>
       </div>
 
     </div>
@@ -486,9 +509,9 @@
       <div style="margin-top:4px;font-size:.8rem">Certyfikowane szkolenia dla firm, instytucji i placówek oświatowych</div>
     </div>
     <div class="footer-links">
-      <a href="https://energiabiznesu.pl" target="_blank" rel="noopener">energiabiznesu.pl</a>
       <a href="#">Polityka prywatności</a>
-      <a href="mailto:szkolenia@energiabiznesu.pl">szkolenia@energiabiznesu.pl</a>
+      <a href="mailto:energiabiznesu@gmail.com">energiabiznesu@gmail.com</a>
+      <span>NIP: 959 147 22 55</span>
     </div>
     <div>© 2026 Energia dla Biznesu</div>
   </div>
